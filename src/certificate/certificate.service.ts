@@ -39,7 +39,7 @@ export class CertificateService {
       });
       console.log('FILLED HTML:', filledHtml);
 
-      const fileName = `cert_${Date.now()}_${Math.random().toString(36).slice(2)}.pdf`;
+      const fileName = `certificate_${Date.now()}_${Math.random().toString(36).slice(2)}.pdf`;
       const filePath = path.join(PDF_DIR, fileName);
       await this.processor.generatePdf(filledHtml, filePath);
 
